@@ -20,12 +20,50 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="JOK-MM-WEI" kind="relationship" relationship="rootViewController" id="bc7-mQ-wQ0"/>
+                        <segue destination="On6-cT-wMh" kind="relationship" relationship="rootViewController" id="gWy-Cw-em9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsW-fj-tSC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1791" y="27"/>
+        </scene>
+        <!--MyNotepad-->
+        <scene sceneID="0Nt-aa-sDs">
+            <objects>
+                <tableViewController id="On6-cT-wMh" customClass="CategoryViewController" customModule="Notepad" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CPR-3f-tda">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="EXc-3v-xeX">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EXc-3v-xeX" id="hXp-C1-X8S">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="On6-cT-wMh" id="aRB-m8-M0U"/>
+                            <outlet property="delegate" destination="On6-cT-wMh" id="VkH-gt-9Zd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MyNotepad" id="QDl-fi-TzE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SxC-es-DJY">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="On6-cT-wMh" id="g44-jN-rPJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="JOK-MM-WEI" kind="show" identifier="goToNote" id="WPY-BM-rX1"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ygg-Cf-FQA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1026" y="33"/>
         </scene>
         <!--Category-->
         <scene sceneID="0WS-HF-nbe">
@@ -74,7 +112,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-903" y="27"/>
+            <point key="canvasLocation" x="-175" y="27"/>
         </scene>
         <!--Title-->
         <scene sceneID="H45-L6-ZxK">
@@ -109,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGM-33-RTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.623188405797109" y="26.785714285714285"/>
+            <point key="canvasLocation" x="587" y="27"/>
         </scene>
     </scenes>
     <resources>
